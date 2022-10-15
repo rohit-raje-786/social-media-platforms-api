@@ -7,7 +7,7 @@ const router = express.Router();
 
 const User = require('../model/User');
 const Post = require('../model/Post');
-const Like = require('../model/like');
+const Like = require('../model/Like');
 const Comment = require('../model/Comment');
 
 router.post(
@@ -205,7 +205,7 @@ router.post('/posts', auth, async (req, res) => {
 		return res.status(200).json(post);
 	} catch (e) {
 		return res.status(500).json({
-			message: 'Server Error'
+			message: e.message
 		});
 	}
 });
@@ -344,7 +344,7 @@ router.post('/comment/:id', auth, async (req, res) => {
 		}
 	} catch (e) {
 		return res.status(500).json({
-			message: 'Server Error'
+			message: e.message
 		});
 	}
 });
