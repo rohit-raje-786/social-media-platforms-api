@@ -11,7 +11,6 @@ const Like = require('../model/Like');
 const Comment = require('../model/Comment');
 
 router.get('/check', (req, res) => {
-	console.log('checking');
 	return res.status(200).json({ message: 'Test Working' });
 });
 
@@ -24,7 +23,6 @@ router.post(
 		})
 	],
 	async (req, res) => {
-		console.log('authenticate testing');
 		const errors = validationResult(req);
 
 		if (!errors.isEmpty()) {
