@@ -76,8 +76,9 @@ router.post(
 );
 
 router.post('/follow/:id', auth, async (req, res) => {
+	console.log(req.user.user.id, req.params.id);
 	if (req.user.user.id === req.params.id) {
-		return res.status(500).json({
+		res.status(500).json({
 			message: 'User cannot follow himself'
 		});
 	} else {
@@ -191,7 +192,6 @@ router.get('/:username', auth, async (req, res) => {
 
 //to add a new post
 router.post('/posts', auth, async (req, res) => {
-	console.log('post');
 	try {
 		const { title, description } = req.body;
 		let post = new Post({
