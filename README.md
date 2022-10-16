@@ -1,6 +1,6 @@
 # social-media-platforms-api
 
-An social media platform api where the user can perform following operations
+An social media platform api where the user can perform following operations</br>
 1.POST /api/authenticate should perform user authentication and return a JWT token.</br>
 2.POST /api/follow/{id} authenticated user would follow user with {id}</br>
 3.POST /api/unfollow/{id} authenticated user would unfollow a user with {id}</br>
@@ -15,7 +15,7 @@ An social media platform api where the user can perform following operations
 
 ## To Run the application
 
-1.npm i
+1.npm i</br>
 2.npm start
 
 ## To Run the test
